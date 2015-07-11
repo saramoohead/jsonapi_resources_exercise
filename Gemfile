@@ -16,6 +16,7 @@ group :test do
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'database_cleaner'
+  gem 'capybara'
   gem 'rack-test', require: 'rack/test'
   gem 'webmock'
 end
