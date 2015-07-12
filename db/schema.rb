@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711231428) do
+ActiveRecord::Schema.define(version: 20150712200846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,15 @@ ActiveRecord::Schema.define(version: 20150711231428) do
     t.string   "caption_text"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "image_id"
   end
+
+  add_index "captions", ["image_id"], name: "index_captions_on_image_id", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "captions", "images"
 end
