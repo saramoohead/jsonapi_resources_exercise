@@ -19,6 +19,7 @@ group :test do
   gem 'capybara'
   gem 'rack-test', require: 'rack/test'
   gem 'webmock'
+  gem 'shoulda-matchers', require: false
 end
 
 # To use ActiveModel has_secure_password

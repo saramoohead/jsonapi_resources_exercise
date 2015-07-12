@@ -1,5 +1,5 @@
 class ImageResource < JSONAPI::Resource
 
-  has_one :caption
+  has_many :captions
 
 end
