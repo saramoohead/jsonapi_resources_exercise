@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
 
-  has_many :captions
+  has_one :caption
 
 end
