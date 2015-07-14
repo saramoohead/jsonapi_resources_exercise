@@ -1,6 +1,8 @@
 class Image < ActiveRecord::Base
 
+  validates :image_url, presence: true
   validate :website_validator
+  validates :caption, length: { minimum: 2 }, allow_nil: true
 
   private
 
