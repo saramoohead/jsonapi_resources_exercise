@@ -1,3 +1,0 @@
-class CaptionsController < ApplicationController
-
-end
