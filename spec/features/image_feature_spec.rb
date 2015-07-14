@@ -24,4 +24,10 @@ feature 'images' do
     expect(Image.all.count).to eq 0
   end
 
+  scenario 'can have optional caption added on creation' do
+    post "/images", { "data" => { "type" => "images", "attributes" => { "image-url" => "http://www.example.com/images/image.jpg", "caption" => "Boo" } } }.to_json, { "CONTENT_TYPE" => "application/vnd.api+json" }
+    result = JSON.parse(last_response.body)["data"]
+    expect(result["caption"]).to eq "Boo"
+  end
+
 end
