@@ -72,6 +72,7 @@ AllCops:
     - 'config/**/*'
     - 'bin/*'
     - 'app/models/*'
+    - Rakefile
 
 Style/BlockComments:
   Description: 'Do not use block comments.'

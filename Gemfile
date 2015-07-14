@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
+
 gem 'rails', '4.2.3'
 
 gem 'rails-api'
@@ -9,6 +11,8 @@ gem 'spring', group: :development
 gem 'pg'
 
 gem 'jsonapi-resources'
+
+gem 'rails_12factor', group: :production
 
 group :test do
   gem 'rspec'
