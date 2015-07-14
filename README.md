@@ -13,8 +13,8 @@ rake db:migrate
 rails s
 rake
 
-curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"captions", "attributes":{"caption-text":"Boo"}}}' http://localhost:3000/captions
-
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"images", "attributes":{"image-url":"http://www.example.com/images/image.jpg"}}}' http://localhost:3000/images
+
+curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{ "data": { "type": "captions", "relationships": { "image": { "data": { "type": "images", "id": "1" } } }, "attributes": { "caption-text": "Boo" } } }' http://localhost:3000/captions
 
 ```

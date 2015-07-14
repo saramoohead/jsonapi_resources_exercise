@@ -1,8 +1,6 @@
 class CaptionResource < JSONAPI::Resource
 
-  attributes :caption_text
+  attributes :caption_text, :image_id
   has_one :image
-
-  filter :contact
 
 end

@@ -21,7 +21,6 @@ feature 'images' do
   scenario 'are not created if not a valid url format' do
     expect(Image.all.count).to eq 0
     post "/images", { "data" => { "type" => "images", "attributes" => { "image-url" => "images/image.jpg" } } }.to_json, { "CONTENT_TYPE" => "application/vnd.api+json" }
-    result = JSON.parse(last_response.body)["data"]
     expect(Image.all.count).to eq 0
   end
 
