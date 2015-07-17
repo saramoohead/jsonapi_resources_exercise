@@ -1,6 +1,6 @@
 A small TDD Rails API using the JSON-API resources specification: http://jsonapi.org/format/
 
-The database accepts image URLs and optional captions.
+The database, on Heroku at https://apiimages.herokuapp.com/images, accepts image URLs and optional captions.
 
 ```
 git clone git@github.com:saramoohead/ruby_json_exercise.git
